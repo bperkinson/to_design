@@ -1,0 +1,53 @@
+<div class="col-sm-8 col-sm-offset-2">
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="form-group">
+  <div class="field">
+    <%= f.label :name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    
+  </div>
+  <div class="field">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, class: "form-control", size: "10x15" %>  
+    </div>
+    
+  </div>
+  <div class="field">
+    <%= f.label :image, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :image, class: "form-control" %>  
+    </div>
+    
+  </div>
+    <div class="field">
+    <%= f.label :link, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :link, class: "form-control" %>  
+    </div>
+    
+  </div>
+    <div class="actions contact-submit">
+    <div class="col-sm-10 col-sm-offset-2">
+      <%= f.submit class: "btn btn-info" %>
+    </div>
+    
+  </div>
+  </div>
+<% end %>
+</div>

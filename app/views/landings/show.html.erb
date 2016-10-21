@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @landing.image.large %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @landing.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @landing.description %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @landing.about %>
+</p>
+
+<p>
+  <strong>About sub:</strong>
+  <%= @landing.about_sub %>
+</p>
+
+<p>
+  <strong>Philosophy:</strong>
+  <%= @landing.philosophy %>
+</p>
+
+<%= link_to 'Edit', edit_landing_path(@landing) %> |
+<%= link_to 'Back', landings_path %>

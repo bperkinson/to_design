@@ -1,0 +1,61 @@
+<div class="landing-container">
+	
+	<div class='sub-title'>Website design that works
+	</div>
+
+	<div class='col-md-12 sub-title-items'>
+		<div id="title-item-0" class="sub-title-item">effective</div>
+		<div id="title-item-1"class="sub-title-item">simple</div>
+		<div id="title-item-2" class="sub-title-item">intelligent</div>
+		<div id="last-title-item" class="sub-title-item">designed for you</div>
+	</div>
+
+</div>
+<div class="about row">
+	<div class='text-center arrow-divider'>
+	<i class="fa fa-chevron-down fa-5x"></i>
+</div>
+	<div class='col-md-3 col-sm-4 details-title' id="about-title">About</div>
+	<div class='col-md-8 col-sm-8 details-desc' id='about-description'>
+		<%= simple_format(@landing.description) %>
+	</div>
+
+	<div class='col-md-3 col-sm-4 details-title' id="phil-title">Philosophy</div>
+	<div class='col-md-8 col-sm-8 details-desc' id='phil-description'>
+		<%= simple_format(@landing.philosophy) %>
+	</div>
+</div>
+<div class="projects row" >
+	<h2 class='project-title' id="projects">Projects</h2>
+	<% @projects.each do |project| %>
+	<div class="project col-xs-12 col-sm-6 col-md-4">
+		<div class="project-thumbnail thumbnail view ">
+			<%= link_to project do %>
+			<%= image_tag project.image.tile %>
+			<div class="caption">
+				<%= project.name %>
+			</div>
+			<div class="description text-center">
+				<p><%= simple_format(truncate(project.description, length: 250)) %></p>
+				<%= link_to "Read more...", project, class: "btn btn-default info" %>
+			</div>		
+			<% end %>
+
+		</div>
+
+	</div>
+	<% end %>
+</div>
+
+<div class="tools">
+<h2 class='tool-title' id="tools">The tools I use</h2>
+<% @tools.each do |tool| %>
+	<div class="col-xs-6">
+		<div class="thumbnail tool">
+			<%= image_tag tool.image.small %>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<%= javascript_include_tag "landings" %>

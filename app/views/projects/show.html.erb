@@ -1,0 +1,19 @@
+
+<% if current_user && current_user.admin? %>
+<div class="col-xs-12 admin-bar">
+	<%= link_to 'Edit', edit_project_path(@project) %> |
+	<%= link_to 'Back', projects_path %>
+</div>
+<% end %>
+
+<div class="project-show col-md-8 col-md-offset-2">
+	<h2><%= @project.name %></h2>
+
+	<div class="project-description">
+		<%= simple_format(@project.description) %>
+	</div>
+	
+		<%= link_to image_tag(@project.image.large, class: "img-responsive center-block img-rounded"), @project.link, target: "_blank" %>
+	
+	
+</div>

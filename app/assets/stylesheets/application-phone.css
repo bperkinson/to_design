@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ */
+
+a:hover {
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+}
+
+
+.title-text {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 6.5em;
+}
+
+.top-brand {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 3.5em;
+}
+
+.top-brand-sm {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 3em;
+}
+
+
+.top-links {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+	clear:both;
+}
+
+.top-logo {
+	padding-bottom: 25px;
+}
+
+.top-link {
+	font-size: 1.7em;
+	text-align: left;
+}
+
+.top-link i {
+	padding-right: 50px;
+	width: 20px;
+}
+
+.footer-copy {
+	text-align: center;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+}
+
+.project-show h2 {
+	font-family: 'Poiret One', sans-serif;
+	font-size: 2.5em;
+	text-align: center;
+	margin-bottom: 25px;
+	color: #ffffff;
+}
+
+.project-show {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #B8AE9C;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+.dynamic-toolbar {
+	background-color: #B8AE9C;
+	position: fixed;
+	top:-150px;
+	width: 100%;
+	opacity: 0;
+}
+
+.dynamic-links li a {
+	opacity: 0;
+	transform: scale(2.2);
+}
+
+.navbar-default .dynamic-links > li > a {
+	color: #ffffff;
+}
+
+.dynamic-brand {
+	position:relative;
+	opacity: 0;
+	left: -350px;
+}
+
+a.top-link.menu-item {
+	display:none;
+	opacity: 0;
+
+}
+
+li.menu-hide {
+	display:none;
+	opacity: 0;
+
+}

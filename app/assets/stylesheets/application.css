@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+
+color pallete
+#595241 brown
+#B8AE9C light brown
+#FFFFFF white
+#ACCFCC light blue
+#8A0917 Red
+
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ *= require landings
+ *= require_self
+ */
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+div#error_explanation {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #595241;
+	background-color: #B8AE9C;
+	border-radius: 7px;
+	margin-bottom: 15px;
+}
+
+div#error_explanation li {
+	margin-right: 40px;
+	color: #8A0917;
+}
+
+.field_with_errors input {
+	border-color: #8A0917;
+}
+.contact {
+	margin-top: 2px;
+	background-color: #B8AE9C;
+	padding: 15px;
+}
+.contact-us {
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+}
+.contact-submit {
+	padding-top: 15px;
+}
+.contact-submit .btn {
+	width: 100%
+}
+
+.navbar-default .navbar-nav > li.contact-button > a {
+	font-size: 1.2em;
+	color: #8A0917;
+}
+.title-text {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 6.5em;
+}
+
+.top-brand {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 2.5em;
+}
+
+.top-brand-sm {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.5em;
+}
+
+.top-links {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+}
+
+.footer-copy {
+	text-align: center;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+}
+
+.project-show h2 {
+	font-family: 'Poiret One', sans-serif;
+	font-size: 4.5em;
+	text-align: center;
+	margin-bottom: 25px;
+	color: #ffffff;
+}
+
+.project-show {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #B8AE9C;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+.dynamic-toolbar {
+	background-color: #B8AE9C;
+	position: fixed;
+	padding:0px;
+	margin: 0px;
+	top:-151px;
+	width: 100%;
+	opacity: 0;
+}
+
+.dynamic-links li a {
+	opacity: 0;
+	transform: scale(2.2);
+}
+
+.navbar-default .dynamic-links > li > a {
+	color: #ffffff;
+}
+
+.dynamic-brand {
+	position:relative;
+	opacity: 0;
+	left: -350px;
+}
+
+.super-text {
+	font-size: 5.5em;
+	color: #595241;
+}

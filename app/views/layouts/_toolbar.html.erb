@@ -1,0 +1,11 @@
+
+          <li class="contact-button"><%= link_to "Contact Us!", new_contact_url %> </li>
+          <li><a class="top-link" href="/#about-image">About </a></li>
+          <li><a class="top-link" href="/#phil-image">Philosophy </a></li>
+          <li><a class="top-link" href="/#projects">Projects </a></li>
+          <li><a class="top-link" href="/#tools">Tools </a></li>
+          <% if current_user %>
+            <li><%= link_to "<i class='fa fa-unlock'></i>".html_safe, destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "<i class='fa fa-lock'></i>".html_safe, "/users/sign_in" %> </li>
+          <% end %>
